@@ -37,15 +37,15 @@ namespace FinalSIM
             this.txt_tamBuff = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btn_salir = new System.Windows.Forms.Button();
-            this.btn_info = new System.Windows.Forms.Button();
             this.msk_filasMax = new System.Windows.Forms.MaskedTextBox();
             this.msk_PaqueXMin = new System.Windows.Forms.MaskedTextBox();
+            this.btn_info = new System.Windows.Forms.Button();
+            this.btn_salir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(266, 245);
+            this.button1.Location = new System.Drawing.Point(285, 237);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 32);
@@ -122,25 +122,6 @@ namespace FinalSIM
             this.label5.TabIndex = 8;
             this.label5.Text = "Filas a simular";
             // 
-            // btn_salir
-            // 
-            this.btn_salir.Location = new System.Drawing.Point(41, 245);
-            this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(50, 32);
-            this.btn_salir.TabIndex = 10;
-            this.btn_salir.Text = "Salir";
-            this.btn_salir.UseVisualStyleBackColor = true;
-            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
-            // 
-            // btn_info
-            // 
-            this.btn_info.Location = new System.Drawing.Point(115, 246);
-            this.btn_info.Name = "btn_info";
-            this.btn_info.Size = new System.Drawing.Size(37, 31);
-            this.btn_info.TabIndex = 11;
-            this.btn_info.Text = "info";
-            this.btn_info.UseVisualStyleBackColor = true;
-            // 
             // msk_filasMax
             // 
             this.msk_filasMax.Location = new System.Drawing.Point(301, 62);
@@ -159,12 +140,34 @@ namespace FinalSIM
             this.msk_PaqueXMin.TabIndex = 13;
             this.msk_PaqueXMin.ValidatingType = typeof(int);
             // 
+            // btn_info
+            // 
+            this.btn_info.BackgroundImage = global::FinalSIM.Properties.Resources.infoIcon;
+            this.btn_info.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_info.Location = new System.Drawing.Point(89, 238);
+            this.btn_info.Name = "btn_info";
+            this.btn_info.Size = new System.Drawing.Size(37, 31);
+            this.btn_info.TabIndex = 11;
+            this.btn_info.UseVisualStyleBackColor = true;
+            this.btn_info.Click += new System.EventHandler(this.btn_info_Click);
+            // 
+            // btn_salir
+            // 
+            this.btn_salir.BackgroundImage = global::FinalSIM.Properties.Resources.exitIcon;
+            this.btn_salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_salir.Location = new System.Drawing.Point(45, 237);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(38, 32);
+            this.btn_salir.TabIndex = 10;
+            this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(417, 296);
+            this.ClientSize = new System.Drawing.Size(430, 289);
             this.Controls.Add(this.msk_PaqueXMin);
             this.Controls.Add(this.msk_filasMax);
             this.Controls.Add(this.btn_info);

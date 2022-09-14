@@ -1,4 +1,5 @@
 ﻿using FinalSIM.Clases;
+using FinalSIM.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,12 @@ namespace FinalSIM
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        Frm_Presentacion presentacion { get; set; }
+
+        public Form1(Frm_Presentacion pres)
         {
             InitializeComponent();
+            presentacion = pres;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,7 +45,14 @@ namespace FinalSIM
 
         private void btn_salir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            presentacion.Close();
+        }
+
+        private void btn_info_Click(object sender, EventArgs e)
+        {
+            Frm_Enunciado enunciado = new Frm_Enunciado();
+            enunciado.Show();
         }
     }
 }

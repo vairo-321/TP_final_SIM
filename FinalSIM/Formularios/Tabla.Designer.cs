@@ -37,7 +37,6 @@ namespace FinalSIM.Formularios
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_info = new System.Windows.Forms.Button();
             this.btn_volver = new System.Windows.Forms.Button();
             this.Evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Reloj = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +53,8 @@ namespace FinalSIM.Formularios
             this.dominio2con = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paquetesDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_info = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,15 +81,6 @@ namespace FinalSIM.Formularios
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(999, 431);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // btn_info
-            // 
-            this.btn_info.Location = new System.Drawing.Point(815, 482);
-            this.btn_info.Name = "btn_info";
-            this.btn_info.Size = new System.Drawing.Size(57, 57);
-            this.btn_info.TabIndex = 1;
-            this.btn_info.Text = "Info";
-            this.btn_info.UseVisualStyleBackColor = true;
             // 
             // btn_volver
             // 
@@ -224,12 +216,34 @@ namespace FinalSIM.Formularios
             this.label1.TabIndex = 4;
             this.label1.Text = "Tabla ilustrativa de la simulacion ";
             // 
+            // btn_info
+            // 
+            this.btn_info.BackgroundImage = global::FinalSIM.Properties.Resources.infoIcon;
+            this.btn_info.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_info.Location = new System.Drawing.Point(826, 487);
+            this.btn_info.Name = "btn_info";
+            this.btn_info.Size = new System.Drawing.Size(51, 47);
+            this.btn_info.TabIndex = 1;
+            this.btn_info.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.BackgroundImage = global::FinalSIM.Properties.Resources.UTN_FRC_logo;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(12, 483);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(191, 55);
+            this.button1.TabIndex = 5;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Frm_tabla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1032, 544);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_volver);
             this.Controls.Add(this.btn_info);
@@ -269,5 +283,6 @@ namespace FinalSIM.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn dominio2con;
         private System.Windows.Forms.DataGridViewTextBoxColumn paquetesDesc;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

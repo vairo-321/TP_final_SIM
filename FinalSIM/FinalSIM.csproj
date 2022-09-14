@@ -54,6 +54,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Frm_Enunciado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_Enunciado.Designer.cs">
+      <DependentUpon>Frm_Enunciado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Frm_Presentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_Presentacion.Designer.cs">
+      <DependentUpon>Frm_Presentacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Tabla.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +76,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Frm_Enunciado.resx">
+      <DependentUpon>Frm_Enunciado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Frm_Presentacion.resx">
+      <DependentUpon>Frm_Presentacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tabla.resx">
       <DependentUpon>Tabla.cs</DependentUpon>
@@ -76,6 +94,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -91,7 +110,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Recursos\" />
+    <None Include="Recursos\infoIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\exitIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\UTN-FRC_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Enunciado.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\matrix-simulacion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\fondojpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\fondo2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
