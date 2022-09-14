@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FinalSIM.Formularios;
 
 namespace FinalSIM.Clases
 {
@@ -18,8 +19,10 @@ namespace FinalSIM.Clases
         private int maximoBuffer { get; set; }
 
         private double media { get; set; }
-     
+
         private Fila filaSIM { get; set; }
+
+        private Frm_tabla formularioTabla { get; set; }
 
 
         public Controlador(int simulacionMaxima, int paquetesXMin, double tamañoBuff, double tamañoPaquete)
@@ -29,30 +32,33 @@ namespace FinalSIM.Clases
             this.TamañoBufferMB = tamañoBuff;
             this.TamañoPaqueteKB = tamañoPaquete;
             maximoBuffer = (int)Math.Truncate((TamañoBufferMB * 1000) / TamañoPaqueteKB);
-            media = 60 / CantPaquetesMinutos;
+            media = 60.0 / (double)CantPaquetesMinutos;
             this.filaSIM = new Fila(media, maximoBuffer);
         }
 
         public void iniciarSimulacion()
         {
-            Console.WriteLine(this.SimMax);
-            Console.WriteLine(this.CantPaquetesMinutos);
-            Console.WriteLine(this.TamañoBufferMB);
-            Console.WriteLine(this.TamañoPaqueteKB);
-            Console.WriteLine(maximoBuffer);
-            Console.WriteLine(media);
+            Console.WriteLine(this.SimMax.ToString());
+            Console.WriteLine(this.CantPaquetesMinutos.ToString());
+            Console.WriteLine(this.TamañoBufferMB.ToString());
+            Console.WriteLine(this.TamañoPaqueteKB.ToString());
+            Console.WriteLine(maximoBuffer.ToString());
+            Console.WriteLine(media.ToString());
+
+            formularioTabla = new Frm_tabla();
+            formularioTabla.Show();
 
             for (int i = 0; i <= SimMax; i++)
             {
-                Console.WriteLine(filaSIM.calcularFilaNueva().ToString());
+                string[] cadena = filaSIM.calcularFilaNueva();
+
+                formularioTabla.cargarTabla(cadena);
+
             }
         }
+    }
+ }
         
      
 
 
-
-
-
-    }
-}

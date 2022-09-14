@@ -7,3 +7,5 @@ C:\Users\diaze\Escritorio\Final SIM\Mi proyecto\FinalSIM\FinalSIM\obj\Debug\Fina
 C:\Users\diaze\Escritorio\Final SIM\Mi proyecto\FinalSIM\FinalSIM\obj\Debug\FinalSIM.csproj.CoreCompileInputs.cache
 C:\Users\diaze\Escritorio\Final SIM\Mi proyecto\FinalSIM\FinalSIM\obj\Debug\FinalSIM.exe
 C:\Users\diaze\Escritorio\Final SIM\Mi proyecto\FinalSIM\FinalSIM\obj\Debug\FinalSIM.pdb
+C:\Users\diaze\Escritorio\Final SIM\Mi proyecto\FinalSIM\FinalSIM\obj\Debug\FinalSIM.Form1.resources
+C:\Users\diaze\Escritorio\Final SIM\Mi proyecto\FinalSIM\FinalSIM\obj\Debug\FinalSIM.Formularios.Frm_tabla.resources

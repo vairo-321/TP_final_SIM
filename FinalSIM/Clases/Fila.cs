@@ -71,12 +71,14 @@ namespace FinalSIM.Clases
             if (primeraFila)
             {
                 primeraFila = false;
-
-                return new string[] { Evento, RelojSegundos.ToString(), RND_paquete.ToString(), Tiempo_llegada_paquete.ToString(), Proximo_paquete.ToString(), "",
+                string[] cadena = new string[] { Evento, RelojSegundos.ToString(), RND_paquete.ToString(), Tiempo_llegada_paquete.ToString(), Proximo_paquete.ToString(), "",
                     "", "", "", EstadoBuffer, ColaBuffer.ToString(), Dominio1.ToString(), Dominio2.ToString(),
                     Paquete_descartado.ToString()};
+
+                return cadena;
             }
-            else 
+
+            else
             {
                 return new string[] { Evento, RelojSegundos.ToString(), RND_paquete.ToString(), Tiempo_llegada_paquete.ToString(), Proximo_paquete.ToString(), RND_redireccion.ToString(),
                     Dominio.ToString(), Tiempo_redireccion.ToString(), Fin_redireccion.ToString(), EstadoBuffer, ColaBuffer.ToString(), Dominio1.ToString(), Dominio2.ToString(),
@@ -88,7 +90,7 @@ namespace FinalSIM.Clases
 
         private void calcular() 
         {
-            if (Proximo_paquete <= Fin_redireccion)
+            if (Proximo_paquete <= Fin_redireccion || Fin_redireccion == null)
             {
                 eventoLlegadaPaquete();
             }
@@ -103,14 +105,14 @@ namespace FinalSIM.Clases
         {
             this.Evento = "ingreso paquete";
             this.RelojSegundos = this.Proximo_paquete;
-            this.RND_paquete = random.NextDouble();
+            this.RND_paquete = Math.Round(random.NextDouble(), 2);
             this.Tiempo_llegada_paquete = Math.Round(-this.media * Math.Log((double)(1 - RND_paquete)), 2);
             this.Proximo_paquete = (double)(RelojSegundos + Tiempo_llegada_paquete);
 
             //Aqui veo si hay paquete redireccionando o no... primera entrada es si no hay 
             if (Fin_redireccion == null )
             {
-                RND_redireccion = random.NextDouble();
+                RND_redireccion = Math.Round(random.NextDouble(), 2);
                 if(RND_redireccion <= 0.25)
                 {
                     this.Dominio = 1;
@@ -154,8 +156,10 @@ namespace FinalSIM.Clases
             {
                 ColaBuffer--;
                 if (EstadoBuffer == "lleno") EstadoBuffer = "libre";
+                if (Dominio == 1) Dominio1++;
+                else Dominio2++;
 
-                RND_redireccion = random.NextDouble();
+                RND_redireccion = Math.Round(random.NextDouble(), 2);
                 if (RND_redireccion <= 0.25)
                 {
                     this.Dominio = 1;

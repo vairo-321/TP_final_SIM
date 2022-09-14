@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace FinalSIM.Formularios
 {
-    public partial class Tabla : Form
+    public partial class Frm_tabla : Form
     {
-        public Tabla()
+        public Frm_tabla()
         {
             InitializeComponent();
         }
+
+        private void Frm_tabla_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public void cargarTabla(string[] cadena)
+        {
+
+            dataGridView1.Rows.Add(cadena);
+
+            
+        }
+
+
     }
 }
