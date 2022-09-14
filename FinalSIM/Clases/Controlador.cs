@@ -40,12 +40,6 @@ namespace FinalSIM.Clases
 
         public void iniciarSimulacion()
         {
-            Console.WriteLine(this.SimMax.ToString());
-            Console.WriteLine(this.CantPaquetesMinutos.ToString());
-            Console.WriteLine(this.TamañoBufferMB.ToString());
-            Console.WriteLine(this.TamañoPaqueteKB.ToString());
-            Console.WriteLine(maximoBuffer.ToString());
-            Console.WriteLine(media.ToString());
 
             formularioTabla = new Frm_tabla(formularioConfig);
 
@@ -56,7 +50,8 @@ namespace FinalSIM.Clases
                 formularioTabla.cargarTabla(cadena);
 
             }
-
+           
+            formularioTabla.armarInfo(SimMax, CantPaquetesMinutos, TamañoBufferMB, TamañoPaqueteKB, maximoBuffer, media);
             formularioConfig.Hide();
             formularioTabla.Show();
 

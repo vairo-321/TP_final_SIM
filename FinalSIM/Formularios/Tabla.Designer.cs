@@ -29,15 +29,14 @@ namespace FinalSIM.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_volver = new System.Windows.Forms.Button();
             this.Evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Reloj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RNDp = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +51,7 @@ namespace FinalSIM.Formularios
             this.dominio1cont = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dominio2con = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paquetesDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_volver = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_info = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -82,16 +82,6 @@ namespace FinalSIM.Formularios
             this.dataGridView1.Size = new System.Drawing.Size(999, 431);
             this.dataGridView1.TabIndex = 0;
             // 
-            // btn_volver
-            // 
-            this.btn_volver.Location = new System.Drawing.Point(899, 492);
-            this.btn_volver.Name = "btn_volver";
-            this.btn_volver.Size = new System.Drawing.Size(112, 36);
-            this.btn_volver.TabIndex = 2;
-            this.btn_volver.Text = "Volver";
-            this.btn_volver.UseVisualStyleBackColor = true;
-            this.btn_volver.Click += new System.EventHandler(this.btn_volver_Click);
-            // 
             // Evento
             // 
             this.Evento.HeaderText = "Evento";
@@ -108,8 +98,8 @@ namespace FinalSIM.Formularios
             // 
             // RNDp
             // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.RNDp.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.RNDp.DefaultCellStyle = dataGridViewCellStyle1;
             this.RNDp.FillWeight = 25F;
             this.RNDp.HeaderText = "RNDp";
             this.RNDp.Name = "RNDp";
@@ -118,8 +108,8 @@ namespace FinalSIM.Formularios
             // 
             // tiempoPaquete
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tiempoPaquete.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tiempoPaquete.DefaultCellStyle = dataGridViewCellStyle2;
             this.tiempoPaquete.HeaderText = "TiempoP";
             this.tiempoPaquete.Name = "tiempoPaquete";
             this.tiempoPaquete.ReadOnly = true;
@@ -127,8 +117,8 @@ namespace FinalSIM.Formularios
             // 
             // proximoPaquete
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.proximoPaquete.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.proximoPaquete.DefaultCellStyle = dataGridViewCellStyle3;
             this.proximoPaquete.HeaderText = "ProximoP";
             this.proximoPaquete.Name = "proximoPaquete";
             this.proximoPaquete.ReadOnly = true;
@@ -136,8 +126,8 @@ namespace FinalSIM.Formularios
             // 
             // RNDr
             // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.RNDr.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.RNDr.DefaultCellStyle = dataGridViewCellStyle4;
             this.RNDr.HeaderText = "RNDr";
             this.RNDr.Name = "RNDr";
             this.RNDr.ReadOnly = true;
@@ -145,8 +135,8 @@ namespace FinalSIM.Formularios
             // 
             // dominio
             // 
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dominio.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dominio.DefaultCellStyle = dataGridViewCellStyle5;
             this.dominio.HeaderText = "Destino";
             this.dominio.Name = "dominio";
             this.dominio.ReadOnly = true;
@@ -154,8 +144,8 @@ namespace FinalSIM.Formularios
             // 
             // tiempoD
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tiempoD.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tiempoD.DefaultCellStyle = dataGridViewCellStyle6;
             this.tiempoD.HeaderText = "TiempoR";
             this.tiempoD.Name = "tiempoD";
             this.tiempoD.ReadOnly = true;
@@ -163,8 +153,8 @@ namespace FinalSIM.Formularios
             // 
             // finRed
             // 
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.finRed.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.finRed.DefaultCellStyle = dataGridViewCellStyle7;
             this.finRed.HeaderText = "ProximaR";
             this.finRed.Name = "finRed";
             this.finRed.ReadOnly = true;
@@ -205,6 +195,16 @@ namespace FinalSIM.Formularios
             this.paquetesDesc.ReadOnly = true;
             this.paquetesDesc.Width = 65;
             // 
+            // btn_volver
+            // 
+            this.btn_volver.Location = new System.Drawing.Point(899, 492);
+            this.btn_volver.Name = "btn_volver";
+            this.btn_volver.Size = new System.Drawing.Size(112, 36);
+            this.btn_volver.TabIndex = 2;
+            this.btn_volver.Text = "Volver";
+            this.btn_volver.UseVisualStyleBackColor = true;
+            this.btn_volver.Click += new System.EventHandler(this.btn_volver_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -225,6 +225,7 @@ namespace FinalSIM.Formularios
             this.btn_info.Size = new System.Drawing.Size(51, 47);
             this.btn_info.TabIndex = 1;
             this.btn_info.UseVisualStyleBackColor = true;
+            this.btn_info.Click += new System.EventHandler(this.btn_info_Click);
             // 
             // button1
             // 

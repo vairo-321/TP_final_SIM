@@ -60,6 +60,12 @@
     <Compile Include="Formularios\Frm_Enunciado.Designer.cs">
       <DependentUpon>Frm_Enunciado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Frm_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_Info.Designer.cs">
+      <DependentUpon>Frm_Info.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Frm_Presentacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_Enunciado.resx">
       <DependentUpon>Frm_Enunciado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Frm_Info.resx">
+      <DependentUpon>Frm_Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_Presentacion.resx">
       <DependentUpon>Frm_Presentacion.cs</DependentUpon>
