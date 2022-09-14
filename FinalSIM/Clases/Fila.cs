@@ -37,8 +37,8 @@ namespace FinalSIM.Clases
             this.maximoBuffer = maximoBuffer;
             this.Evento = "inicio";
             this.RelojSegundos = 0.0;
-            this.RND_paquete = random.NextDouble();
-            this.Tiempo_llegada_paquete = Math.Round(-this.media * Math.Log((double)(1 - RND_paquete)), 2) ;
+            this.RND_paquete = TruncateDecimal(random.NextDouble(),2);
+            this.Tiempo_llegada_paquete = TruncateDecimal(-this.media * Math.Log((double)(1 - RND_paquete)), 2) ;
             this.Proximo_paquete = (double)(RelojSegundos + Tiempo_llegada_paquete);
             this.Fin_redireccion = null;
             this.EstadoBuffer = "libre";
@@ -100,14 +100,14 @@ namespace FinalSIM.Clases
         {
             this.Evento = "ingreso paquete";
             this.RelojSegundos = this.Proximo_paquete;
-            this.RND_paquete = Math.Round(random.NextDouble(), 2);
-            this.Tiempo_llegada_paquete = Math.Round(-this.media * Math.Log((double)(1 - RND_paquete)), 2);
+            this.RND_paquete = TruncateDecimal(random.NextDouble(), 2);
+            this.Tiempo_llegada_paquete = TruncateDecimal(-this.media * Math.Log((double)(1 - RND_paquete)), 2);
             this.Proximo_paquete = (double)(RelojSegundos + Tiempo_llegada_paquete);
 
             //Aqui veo si hay paquete redireccionando o no... primera entrada es si no hay 
             if (Fin_redireccion == null )
             {
-                RND_redireccion = Math.Round(random.NextDouble(), 2);
+                RND_redireccion = TruncateDecimal(random.NextDouble(), 2);
                 if(RND_redireccion <= 0.25)
                 {
                     this.Dominio = 1;
@@ -154,7 +154,7 @@ namespace FinalSIM.Clases
                 if (Dominio == 1) Dominio1++;
                 else Dominio2++;
 
-                RND_redireccion = Math.Round(random.NextDouble(), 2);
+                RND_redireccion = TruncateDecimal(random.NextDouble(), 2);
                 if (RND_redireccion <= 0.25)
                 {
                     this.Dominio = 1;
@@ -166,7 +166,7 @@ namespace FinalSIM.Clases
                     this.Tiempo_redireccion = 0.6;
                 }
 
-                this.Fin_redireccion = Tiempo_redireccion + RelojSegundos;
+                this.Fin_redireccion = TruncateDecimal((double)(Tiempo_redireccion + RelojSegundos), 2);
             }
             else
             {
@@ -179,10 +179,10 @@ namespace FinalSIM.Clases
             }
         }
 
-        private decimal TruncateDecimal(decimal value, int precision)
+        private double TruncateDecimal(double value, int precision)
         {
-            decimal step = (decimal)Math.Pow(10, precision);
-            decimal tmp = Math.Truncate(step * value);
+            double step = (double)Math.Pow(10, precision);
+            double tmp = Math.Truncate(step * value);
             return tmp / step;
         }
 

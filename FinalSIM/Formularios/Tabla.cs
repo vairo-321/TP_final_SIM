@@ -58,7 +58,7 @@ namespace FinalSIM.Formularios
 
             int totalPaquetes = celda10i + celda11i + celda12i + celda13i + 1;
             int totalRedistribuido = celda11i + celda12i;
-            int totalRechazado = celda13i + 1;
+            int totalRechazado = celda13i;
 
             info.actualizar( SimMax, cantPaquetesMin, tamañoBuff, tamañoPaqu, maxBuff, media, totalPaquetes, totalRedistribuido, totalRechazado);
 
