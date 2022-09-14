@@ -33,7 +33,20 @@ namespace FinalSIM.Clases
             this.filaSIM = new Fila(media, maximoBuffer);
         }
 
+        public void iniciarSimulacion()
+        {
+            Console.WriteLine(this.SimMax);
+            Console.WriteLine(this.CantPaquetesMinutos);
+            Console.WriteLine(this.TamañoBufferMB);
+            Console.WriteLine(this.TamañoPaqueteKB);
+            Console.WriteLine(maximoBuffer);
+            Console.WriteLine(media);
 
+            for (int i = 0; i <= SimMax; i++)
+            {
+                Console.WriteLine(filaSIM.calcularFilaNueva().ToString());
+            }
+        }
         
      
 

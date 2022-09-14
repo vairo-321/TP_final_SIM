@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalSIM.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,14 @@ namespace FinalSIM
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int SimMax = Int32.Parse(txt_maxSim.Text);
+            int CantPaquetesMinutos = Int32.Parse(txt_cantPaq.Text);
+            double TamañoBufferMB = Double.Parse(txt_tamBuff.Text);
+            double TamañoPaqueteKB = Double.Parse(txt_tamPaq.Text);
 
+            Controlador controlador = new Controlador(SimMax, CantPaquetesMinutos, TamañoBufferMB, TamañoPaqueteKB);
+
+            controlador.iniciarSimulacion();
         }
 
 

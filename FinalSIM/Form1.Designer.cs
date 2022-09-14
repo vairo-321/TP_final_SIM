@@ -37,7 +37,7 @@ namespace FinalSIM
             this.label3 = new System.Windows.Forms.Label();
             this.txt_tamBuff = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_maxSim = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -108,28 +108,29 @@ namespace FinalSIM
             this.label4.TabIndex = 6;
             this.label4.Text = "Tamaño de buffer (mb)";
             // 
-            // textBox1
+            // txt_maxSim
             // 
-            this.textBox1.Location = new System.Drawing.Point(242, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txt_maxSim.Location = new System.Drawing.Point(242, 100);
+            this.txt_maxSim.Name = "txt_maxSim";
+            this.txt_maxSim.Size = new System.Drawing.Size(100, 20);
+            this.txt_maxSim.TabIndex = 9;
+            this.txt_maxSim.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(72, 100);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 13);
+            this.label5.Size = new System.Drawing.Size(115, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Cantidad de paquetes por minuto";
+            this.label5.Text = "cantidad de simulacion";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 297);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_maxSim);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_tamBuff);
             this.Controls.Add(this.label4);
@@ -156,7 +157,7 @@ namespace FinalSIM
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_tamBuff;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_maxSim;
         private System.Windows.Forms.Label label5;
     }
 }
