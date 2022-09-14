@@ -37,8 +37,8 @@ namespace FinalSIM.Formularios
         public void armarInfo(int SimMax, int cantPaquetesMin, double tamañoBuff, double tamañoPaqu, int maxBuff, double media)
         {
 
-
-            DataGridViewRow fila = dataGridView1.Rows[SimMax];
+            int ultimoIndice = dataGridView1.RowCount;
+            DataGridViewRow fila = dataGridView1.Rows[ultimoIndice - 2];
 
             DataGridViewCell celda10 =  fila.Cells[10];
             DataGridViewCell celda11 = fila.Cells[11];

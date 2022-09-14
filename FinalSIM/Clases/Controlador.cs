@@ -38,16 +38,22 @@ namespace FinalSIM.Clases
             this.formularioConfig = formularioConfig;
         }
 
-        public void iniciarSimulacion()
+        public void iniciarSimulacion(int desde, int hasta)
         {
 
             formularioTabla = new Frm_tabla(formularioConfig);
 
             for (int i = 0; i <= SimMax; i++)
             {
-                string[] cadena = filaSIM.calcularFilaNueva();
+                string[] cadena = filaSIM.calcularFilaNueva(i);
 
-                formularioTabla.cargarTabla(cadena);
+                if(desde <= i && hasta >= i || i == SimMax)
+                {
+                    
+                    formularioTabla.cargarTabla(cadena);
+                }
+
+                
 
             }
            

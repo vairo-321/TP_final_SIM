@@ -48,28 +48,28 @@ namespace FinalSIM.Clases
             this.Paquete_descartado = 0;
         }
 
-        public string[] calcularFilaNueva()
+        public string[] calcularFilaNueva(int indice)
         {
             if(primeraFila)
             {
-                return vectorString();
+                return vectorString(indice);
             }
             else
             {
                 calcular();
-                return vectorString();
+                return vectorString(indice);
             }
         }
 
 
-        private string[] vectorString()
+        private string[] vectorString(int indice)
         {
             if (primeraFila)
             {
                 primeraFila = false;
                 string[] cadena = new string[] { Evento, RelojSegundos.ToString(), RND_paquete.ToString(), Tiempo_llegada_paquete.ToString(), Proximo_paquete.ToString(), "",
                     "", "", "", EstadoBuffer, ColaBuffer.ToString(), Dominio1.ToString(), Dominio2.ToString(),
-                    Paquete_descartado.ToString()};
+                    Paquete_descartado.ToString(), indice.ToString()};
 
                 return cadena;
             }
@@ -78,7 +78,7 @@ namespace FinalSIM.Clases
             {
                 return new string[] { Evento, RelojSegundos.ToString(), RND_paquete.ToString(), Tiempo_llegada_paquete.ToString(), Proximo_paquete.ToString(), RND_redireccion.ToString(),
                     Dominio.ToString(), Tiempo_redireccion.ToString(), Fin_redireccion.ToString(), EstadoBuffer, ColaBuffer.ToString(), Dominio1.ToString(), Dominio2.ToString(),
-                    Paquete_descartado.ToString()};
+                    Paquete_descartado.ToString(), indice.ToString()};
             } 
         
         }

@@ -31,9 +31,10 @@ namespace FinalSIM
                 double TamañoBufferMB = Double.Parse(txt_tamBuff.Text);
                 double TamañoPaqueteKB = Double.Parse(txt_tamPaq.Text);
 
+
                 Controlador controlador = new Controlador(SimMax, CantPaquetesMinutos, TamañoBufferMB, TamañoPaqueteKB, this);
 
-                controlador.iniciarSimulacion();
+                controlador.iniciarSimulacion(50, 60);
 
             }
             catch(Exception error)
