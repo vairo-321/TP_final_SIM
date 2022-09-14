@@ -50,7 +50,6 @@ namespace FinalSIM.Clases
 
         public string[] calcularFilaNueva()
         {
-
             if(primeraFila)
             {
                 return vectorString();
@@ -60,9 +59,6 @@ namespace FinalSIM.Clases
                 calcular();
                 return vectorString();
             }
-
-
-
         }
 
 
@@ -98,7 +94,6 @@ namespace FinalSIM.Clases
             {
                 eventoFinRedireccion();
             }
-
         }
 
         private void eventoLlegadaPaquete()
@@ -172,7 +167,6 @@ namespace FinalSIM.Clases
                 }
 
                 this.Fin_redireccion = Tiempo_redireccion + RelojSegundos;
-
             }
             else
             {

@@ -20,20 +20,28 @@ namespace FinalSIM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int SimMax = Int32.Parse(txt_maxSim.Text);
-            int CantPaquetesMinutos = Int32.Parse(txt_cantPaq.Text);
-            double TamañoBufferMB = Double.Parse(txt_tamBuff.Text);
-            double TamañoPaqueteKB = Double.Parse(txt_tamPaq.Text);
+            try
+            {
+                int SimMax = Int32.Parse(msk_filasMax.Text);
+                int CantPaquetesMinutos = Int32.Parse(msk_PaqueXMin.Text);
+                double TamañoBufferMB = Double.Parse(txt_tamBuff.Text);
+                double TamañoPaqueteKB = Double.Parse(txt_tamPaq.Text);
 
-            Controlador controlador = new Controlador(SimMax, CantPaquetesMinutos, TamañoBufferMB, TamañoPaqueteKB);
+                Controlador controlador = new Controlador(SimMax, CantPaquetesMinutos, TamañoBufferMB, TamañoPaqueteKB, this);
 
-            controlador.iniciarSimulacion();
+                controlador.iniciarSimulacion();
+
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+
         }
 
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btn_salir_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
