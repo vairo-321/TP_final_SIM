@@ -30,11 +30,24 @@ namespace FinalSIM
                 int CantPaquetesMinutos = Int32.Parse(msk_PaqueXMin.Text);
                 double TamañoBufferMB = Double.Parse(txt_tamBuff.Text);
                 double TamañoPaqueteKB = Double.Parse(txt_tamPaq.Text);
+                int desde;
+                int hasta;
+
+                if (checkBox1.Checked)
+                {
+                    desde = Int32.Parse(msk_desde.Text);
+                    hasta = Int32.Parse(msk_hasta.Text);
+                }
+                else
+                {
+                    desde = 0;
+                    hasta = SimMax;
+                }
 
 
                 Controlador controlador = new Controlador(SimMax, CantPaquetesMinutos, TamañoBufferMB, TamañoPaqueteKB, this);
 
-                controlador.iniciarSimulacion(50, 60);
+                controlador.iniciarSimulacion(desde, hasta);
 
             }
             catch(Exception error)
@@ -54,6 +67,18 @@ namespace FinalSIM
         {
             Frm_Enunciado enunciado = new Frm_Enunciado();
             enunciado.Show();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                groupBox1.Enabled = true;
+            }
+            else
+            {
+                groupBox1.Enabled = false;
+            }
         }
     }
 }
