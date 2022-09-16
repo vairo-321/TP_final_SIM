@@ -12,3 +12,7 @@ C:\Users\diaze\Escritorio\Final SIM\Mi proyecto\FinalSIM\FinalSIM\obj\Debug\Fina
 C:\Users\diaze\Escritorio\Final SIM\Mi proyecto\FinalSIM\FinalSIM\obj\Debug\FinalSIM.Formularios.Frm_Enunciado.resources
 C:\Users\diaze\Escritorio\Final SIM\Mi proyecto\FinalSIM\FinalSIM\obj\Debug\FinalSIM.Formularios.Frm_Presentacion.resources
 C:\Users\diaze\Escritorio\Final SIM\Mi proyecto\FinalSIM\FinalSIM\obj\Debug\FinalSIM.Formularios.Frm_Info.resources
+C:\Users\diaze\Escritorio\Final SIM\Mi proyecto\FinalSIM\FinalSIM\bin\Debug\FinalSIM.exe.manifest
+C:\Users\diaze\Escritorio\Final SIM\Mi proyecto\FinalSIM\FinalSIM\bin\Debug\FinalSIM.application
+C:\Users\diaze\Escritorio\Final SIM\Mi proyecto\FinalSIM\FinalSIM\obj\Debug\FinalSIM.exe.manifest
+C:\Users\diaze\Escritorio\Final SIM\Mi proyecto\FinalSIM\FinalSIM\obj\Debug\FinalSIM.application
